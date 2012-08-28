@@ -121,15 +121,17 @@
 			function whileplaying () {
 				waveformData = this.waveformData;
 				window.requestAnimationFrame(function() {
-					// Move 256 absolutely-positioned 1x1-pixel DIVs, for example (ugly, but works)
-					for (i=0; i<256; i++) {
-						if (waveformData.left[i] !== 0) {
-							lPixels[i].style.top = (256-(gScale+Math.ceil(waveformData.left[i]*gScale)))+'px';
+					// Move 256 absolutely-positioned DIVs,  (ugly, but it works)
+					if (waveformData !== undefined) {
+						for (i=0; i<256; i++) {
+							if (waveformData.left[i] !== 0) {
+								lPixels[i].style.top = (256-(gScale+Math.ceil(waveformData.left[i]*gScale)))+'px';
+							}
+							if (waveformData.right[i] !== 0) {
+								rPixels[i].style.top = (256-(gScale+Math.ceil(waveformData.right[i]*gScale)))+'px';
+							}
 						}
-						if (waveformData.right[i] !== 0) {
-							rPixels[i].style.top = (256-(gScale+Math.ceil(waveformData.right[i]*gScale)))+'px';
-						}
-					}	
+					}
 				});
 			}
 

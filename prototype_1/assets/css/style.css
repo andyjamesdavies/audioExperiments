@@ -1,0 +1,53 @@
+#container {
+	font-family: helvetica, arial, sans-serif;
+	height:300px;
+	width:100%;
+}
+
+.btn-play {
+	color:#ccc;
+	text-align: center;
+	width:100%;
+}
+
+#graphPixels {
+	position:relative;
+	margin-top:300px;
+	margin-left:auto;
+	margin-right:auto;
+	width:200px;
+	height:1px;
+	background:#ccc;
+}
+
+#leftPixels div,
+#rightPixels div {
+	position:absolute;
+	height:1px;
+	width:50px;
+	background:#ccc;
+}
+
+#leftPixels div {
+	left:25px;
+}
+
+#rightPixels div {
+	right:25px;
+}
+
+.credit {
+	position:relative;
+	margin-top:300px;
+	width:100%;
+	text-align: center;
+}
+
+.credit a {
+	text-decoration: none;
+	color:#ccc;
+}
+
+.credit a:hover {
+	text-decoration: underline;
+}
